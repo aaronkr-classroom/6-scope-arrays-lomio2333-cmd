@@ -10,11 +10,6 @@
 #define CMD_DAMAGE		0x40 // Bit 6 - 피해 경고	0100 0000
 #define CMD_GAMEOVER	0x80 // Bit 7 - 죽음		1000 0000
 
-signed char CommandOff(signed char fleet_power) {
-	if (fleet_power < 0)
-		fleet_power = (0x80 << fleet_power);
-		return fleet_power;
-}
 
 // Toggle 명령 ON
 unsigned char CommandOn(unsigned char fleet, unsigned char bit) {
