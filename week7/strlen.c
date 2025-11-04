@@ -21,13 +21,13 @@ int main(void) {
 	printf("str length=%d\n",str_length);
 
 	char data2[10] = { 'a','b','c',0, };
-	char result[100];
+	char result[100]="hello";
 
-	printf("Result(0):%s",result);
-	strcpy_s(result, strlen(result)+1,data2);//result="abc";
-	printf("Result(cpy):%s", result);
-	strcat_s(result, strlen(result)+1, "def");//result="abcdef";
-	printf("Result(cat):%s", result);
+	printf("Result(0):%s\n",result);
+	strcpy_s(result, sizeof(result),data2);//result="abc";
+	printf("Result(cpy):%s\n", result);
+	strcat_s(result, sizeof(result), "def");//result="abcdef";
+	printf("Result(cat):%s\n", result);
 
 	return 0;
 }
